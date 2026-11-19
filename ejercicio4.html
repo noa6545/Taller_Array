@@ -3,17 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de estudiantes</title>
+    <title>Registro de Citas (Veterinaria) 🦮</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <main class="page-shell">
+    <main class="page-shell page-shell--wide">
         <section class="card">
-            <p class="eyebrow">Ejercicio 4 · Reto final</p>
-            <h1>Buscador de estudiantes</h1>
-            <p>Este ejercicio todavía no tiene contenido implementado.</p>
-            <a class="back-link" href="index.html">Volver a los ejercicios</a>
+            <header>
+                <p class="eyebrow">Ejercicio 4</p>
+                <h1>Registro de citas veterinarias</h1>
+                <p>Administra las citas de tus mascotas</p>
+            </header>
+            <section class="contenedor">
+                <h2>Registrar nueva cita</h2>
+                <form id="consulta" novalidate>
+                    <div class="grupo">
+                        <label for="fechaCita">Fecha de la cita:</label>
+                        <input type="date" id="fechaCita" required>
+                    </div>
+                    <div class="grupo">
+                        <label for="nombreMascota">Nombre de la mascota:</label>
+                        <input type="text" id="nombreMascota" placeholder="Ingrese el nombre" required>
+                    </div>
+                    <div class="grupo">
+                        <label for="tipoMascota">Tipo de mascota:</label>
+                        <input type="text" id="tipoMascota" required>
+                    </div>
+                    <div class="grupo">
+                        <label for="razaMascota">Raza de la mascota:</label>
+                        <input type="text" id="razaMascota" placeholder="Ingrese la raza" required>
+                    </div>
+                    <div class="grupo">
+                        <label for="edadMascota">Edad de la mascota (años):</label>
+                        <input type="number" id="edadMascota" min="0" placeholder="Edad en años" required>
+                    </div>
+                    <div class="grupo">
+                        <label for="tipoConsulta">Tipo de consulta:</label>
+                        <select id="tipoConsulta" required>
+                            <option value="">Seleccione una consulta</option>
+                            <option value="Cita médica">Cita médica</option>
+                            <option value="Baño y estética">Baño y estética</option>
+                            <option value="Vacunación">Vacunación</option>
+                            <option value="Urgencia">Urgencia</option>
+                        </select>
+                    </div>
+                    <button type="submit">Registrar cita</button>
+                </form>
+            </section>
+            <section class="contenedor">
+                <h2>Citas registradas 📅</h2>
+                <p>Total de citas: <strong id="Citas">0</strong></p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Nombre</th>
+                                <th>Tipo de mascota</th>
+                                <th>Raza</th>
+                                <th>Edad</th>
+                                <th>Tipo de consulta</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla"></tbody>
+                    </table>
+                </div>
+            </section>
+            <footer>
+                <a class="back-link" href="index.html">Volver a los ejercicios</a>
+            </footer>
         </section>
     </main>
+    <script src="js/ejercicio4.js"></script>
 </body>
 </html>

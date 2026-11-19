@@ -141,6 +141,7 @@ label {
 
 input[type="text"],
 input[type="number"],
+input[type="date"],
 select {
     width: 100%;
     min-height: 48px;
@@ -161,6 +162,7 @@ input[type="number"]::placeholder {
 
 input[type="text"]:focus,
 input[type="number"]:focus,
+input[type="date"]:focus,
 select:focus {
     border-color: var(--color-purple);
     box-shadow: 0 0 0 3px rgb(168 85 247 / 20%);
@@ -168,6 +170,7 @@ select:focus {
 
 input[type="text"].is-invalid,
 input[type="number"].is-invalid,
+input[type="date"].is-invalid,
 select.is-invalid {
     border-color: var(--color-purple);
     background: rgb(168 85 247 / 14%);
